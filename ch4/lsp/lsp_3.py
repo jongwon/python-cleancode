@@ -1,18 +1,25 @@
-class Event:
 
+class Event:
     def __init__(self, raw_data):
         self.raw_data = raw_data
 
     @staticmethod
-    def meets_condition(event_data: dict) -> bool:
+    def meets_condition(event_data:dict) -> bool:
         return False
-s
+
+    @staticmethod
+    def meets_condition_pre(event_data: dict):
+        assert isinstance(event_data, dict), f"{event_data!r} is not a dict"
+        for moment in ("before", "after"):
+            assert moment in event_data, f"{moment} not in {event_data}"
+            assert isinstance(event_data[moment], dict)
+
 
 class UnknownEvent(Event):
     pass
 
-class LoginEvent(Event):
 
+class LoginEvent(Event):
     @staticmethod
     def meets_condition(event_data: dict) -> bool:
         return (
@@ -22,7 +29,6 @@ class LoginEvent(Event):
 
 
 class LogoutEvent(Event):
-
     @staticmethod
     def meets_condition(event_data: dict) -> bool:
         return (
@@ -31,21 +37,30 @@ class LogoutEvent(Event):
         )
 
 
+class TransactionEvent(Event):
+    @staticmethod
+    def meets_condition(event_data: dict) -> bool:
+        return event_data["after"].get("transaction") is not None
+
+
 class SystemMonitor:
     def __init__(self, event_data):
         self.event_data = event_data
 
     def identify_event(self):
-        for event_cls in Event.__subclasses__():
-            try:
-                if event_cls.meets_condition(self.event_data):
-                    return event_cls(self.event_data)
-            except KeyError:
-                continue
-        return UnknownEvent(self.event_data)
+        Event.meets_condition_pre(self.event_data)
+        event_cls = next(
+            (
+                event_cls
+                for event_cls in Event.__subclasses__()
+                if event_cls.meets_condition(self.event_data)
+            ),
+            UnknownEvent,
+        )
+        return event_cls(self.event_data)
 
 
-## ===== test
+## ==== test
 
 log1 = SystemMonitor({
     "before": {"session": 0},
@@ -67,3 +82,10 @@ log3 = SystemMonitor({
 });
 
 print(log3.identify_event().__class__.__name__)
+
+log4 = SystemMonitor({
+    "before": {"session": 1},
+    "after": {"session":3, "transaction": "Tx001" }
+});
+
+print(log4.identify_event().__class__.__name__)

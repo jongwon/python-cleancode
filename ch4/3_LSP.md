@@ -76,6 +76,12 @@ Found 1 error in 1 file (checked 1 source file)
 <img src="https://github.com/jongwon/python-cleancode/raw/master/ch4/images/3_lsp_2.png" width="300"/>
 </div>
 
+
+``` python
+class Event:
+  
+```
+
 ### LSP 최종 정리
 
 
