@@ -1,4 +1,4 @@
-[위로](./summary.md)
+[위로](./README.md)
 
 
 ## 3. 리스코프 치환 원칙 (LSP)
@@ -79,4 +79,4 @@ Found 1 error in 1 file (checked 1 source file)
 ### LSP 최종 정리
 
 
-[목차로](./summary.md)
+[목차로](./README.md)

@@ -1,4 +1,4 @@
-[위로](./summary.md)
+[위로](./README.md)
 
 
 
@@ -63,4 +63,4 @@ class SystemMonitor:
 
 * 코드를 변경하지 않고 기능을 확장하기 위해서는 보호하려는 추상화에 대해서 적절한 폐쇄를 해야 한다. 이 경우 meets_condition(event_data: dict) 라는 staticmethod 를 정의한 것이 폐쇄라고 볼 수 있다.
 
-[목차로](./summary.md)
+[목차로](./README.md)
