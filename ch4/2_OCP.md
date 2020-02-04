@@ -44,7 +44,7 @@ class SystemMonitor:
 * 목적 : 새로운 이벤트가 추가되더라도 기존 소스가 수정되지 않게 하라!
 
 <div style="text-align:center;">
-<img src="https://github.com/jongwon/python-cleancode/raw/master/ch4/images/2_ocp_1.png" width="300"/>
+<img src="https://github.com/jongwon/python-cleancode/raw/master/ch4/images/2_ocp_1.png" width="500"/>
 </div>
 
 * 소스 코드 예제 : openclosed_2.py
@@ -53,7 +53,7 @@ class SystemMonitor:
 ### 이벤트 시스템 확장
 
 <div style="text-align:center;">
-<img src="https://github.com/jongwon/python-cleancode/raw/master/ch4/images/2_ocp_2.png" width="400"/>
+<img src="https://github.com/jongwon/python-cleancode/raw/master/ch4/images/2_ocp_2.png" width="600"/>
 </div>
 
 * 소스 코드 예제 : openclosed_3.py
