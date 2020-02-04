@@ -9,9 +9,6 @@ class Event:
     def meets_condition(self, event_data: dict) -> bool:
         return False
 
-    @classmethod
-    def test(cls):
-        return False
 
 
 class LoginEvent(Event):
