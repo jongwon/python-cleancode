@@ -77,10 +77,7 @@ Found 1 error in 1 file (checked 1 source file)
 </div>
 
 
-``` python
-class Event:
-  
-```
+[예제](https://github.com/jongwon/python-cleancode/blob/master/ch4/lsp/lsp_3.py)
 
 ### LSP 최종 정리
 
