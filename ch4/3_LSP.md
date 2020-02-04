@@ -72,7 +72,9 @@ Found 1 error in 1 file (checked 1 source file)
 * 하위 클래스는 부모 클래스에 정의된 것보다 사전조건을 엄격하게 만들면 안 된다.
 * 하위 클래스는 부모 클래스에 정의된 것보다 약한 사후조건을 만들면 안 된다.
 
-
+<div style="text-align:center;">
+<img src="https://github.com/jongwon/python-cleancode/raw/master/ch4/images/3_lsp_2.png" width="300"/>
+</div>
 
 ### LSP 최종 정리
 
