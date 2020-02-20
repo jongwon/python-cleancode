@@ -1,8 +1,7 @@
 from functools import wraps
 from unittest import TestCase, main
-import inspect
 
-from .mrstatus import MergeRequestStatus, MergeRequestException
+from ch8.mrstatus import MergeRequestStatus
 from .ut_frameworks_1 import MergeRequest as MergeRequest1
 
 

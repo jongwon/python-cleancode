@@ -3,8 +3,8 @@
  AcceptanceThreshold 를 import 만 한 것이다.
 
 """
-from .mrstatus import MergeRequestException
-from .mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
+from ch8.mrstatus import MergeRequestException
+from ch8.mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
 from .ut_frameworks_3 import AcceptanceThrreshold
 
 class MergeRequest(object):

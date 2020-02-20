@@ -4,8 +4,8 @@
 """
 import pytest
 
-from .mrstatus import MergeRequestException
-from .mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
+from ch8.mrstatus import MergeRequestException
+from ch8.mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
 
 
 class AcceptanceThrreshold:

@@ -1,0 +1,8 @@
+{
+  "test_coverage_1.py::test_2_\ucc2c\uc131\uc774_2\ud45c\uc774\uba74_\uac70\uc808\ud55c\ub2e4": true,
+  "test_coverage_1.py::test_acceptance_threshold_status_resolution[context0-MergeRequestStatus.PENDING]": true,
+  "test_coverage_1.py::test_acceptance_threshold_status_resolution[context1-MergeRequestStatus.PENDING]": true,
+  "test_coverage_1.py::test_acceptance_threshold_status_resolution[context2-MergeRequestStatus.REJECTED]": true,
+  "test_coverage_1.py::test_acceptance_threshold_status_resolution[context3-MergeRequestStatus.APPROVED]": true,
+  "test_coverage_1.py::test_cannot_vote_on_closed_merge_request": true
+}

@@ -2,11 +2,11 @@
  status 판단을 대체할 AcceptanceThrreshold 클래스를 만든다.
 
 """
-from .mrstatus import MergeRequestException
-from .mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
+from ch8.mrstatus import MergeRequestException
+from ch8.mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
 
 
-class AcceptanceThrreshold:
+class AcceptanceThreshold:
 
     def __init__(self, merge_req_context: dict) -> None:
         self._context = merge_req_context
@@ -33,7 +33,7 @@ class MergeRequest(object):
     def status(self):
         if self._status == MergeRequestStatus.CLOSED:
             return self._status
-        return AcceptanceThrreshold(self._context).status()
+        return AcceptanceThreshold(self._context).status()
 
     def _cannot_vote_if_closed(self):
         if self._status == MergeRequestStatus.CLOSED:

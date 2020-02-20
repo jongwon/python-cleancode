@@ -3,8 +3,8 @@
  CLOSED 상태인 경우에는 더이상 merge 를 할 수 없다.
 
 """
-from .mrstatus import MergeRequestException
-from .mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
+from ch8.mrstatus import MergeRequestException
+from ch8.mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
 
 class MergeRequest(object):
     """  merge 요구를 추상화한 엔터티 """

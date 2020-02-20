@@ -1,5 +1,5 @@
 
-from .mrstatus import MergeRequestStatus
+from ch8.mrstatus import MergeRequestStatus
 
 class MergeRequest(object):
     """  merge 요구를 추상화한 엔터티 """

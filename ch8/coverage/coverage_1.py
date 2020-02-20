@@ -1,7 +1,6 @@
 
 from enum import Enum
 
-
 class MergeRequestStatus(Enum):
     APPROVED = "approved"
     REJECTED = "rejected"
@@ -19,16 +18,16 @@ class AcceptanceThreshold:
         self._context = merge_request_context
 
     def status(self):
-        if self._context["downvotes"]:
+        if self._context["반대"]:
             return MergeRequestStatus.REJECTED
-        elif len(self._context["upvotes"]) >= 2:
+        elif len(self._context["찬성"]) >= 2:
             return MergeRequestStatus.APPROVED
         return MergeRequestStatus.PENDING
 
 
 class MergeRequest:
     def __init__(self):
-        self._context = {"upvotes": set(), "downvotes": set()}
+        self._context = {"찬성": set(), "반대": set()}
         self._status = MergeRequestStatus.OPEN
 
     def close(self):
@@ -38,21 +37,18 @@ class MergeRequest:
     def status(self):
         if self._status == MergeRequestStatus.CLOSED:
             return self._status
-
         return AcceptanceThreshold(self._context).status()
 
     def _cannot_vote_if_closed(self):
         if self._status == MergeRequestStatus.CLOSED:
-            raise MergeRequestException("can't vote on a closed merge request")
+            raise MergeRequestException("CLOSED 상태인 표결에는 merge 할 수 없습니다.")
 
     def upvote(self, by_user):
         self._cannot_vote_if_closed()
-
-        self._context["downvotes"].discard(by_user)
-        self._context["upvotes"].add(by_user)
+        self._context["반대"].discard(by_user)
+        self._context["찬성"].add(by_user)
 
     def downvote(self, by_user):
         self._cannot_vote_if_closed()
-
-        self._context["upvotes"].discard(by_user)
-        self._context["downvotes"].add(by_user)
+        self._context["찬성"].discard(by_user)
+        self._context["반대"].add(by_user)
