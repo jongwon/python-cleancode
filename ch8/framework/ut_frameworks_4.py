@@ -5,7 +5,7 @@
 """
 from ch8.mrstatus import MergeRequestException
 from ch8.mrstatus import MergeRequestExtendedStatus as MergeRequestStatus
-from .ut_frameworks_3 import AcceptanceThrreshold
+from .ut_frameworks_3 import AcceptanceThreshold
 
 class MergeRequest(object):
     """  merge 요구를 추상화한 엔터티 """
@@ -21,7 +21,7 @@ class MergeRequest(object):
     def status(self):
         if self._status == MergeRequestStatus.CLOSED:
             return self._status
-        return AcceptanceThrreshold(self._context).status()
+        return AcceptanceThreshold(self._context).status()
 
     def _cannot_vote_if_closed(self):
         if self._status == MergeRequestStatus.CLOSED:

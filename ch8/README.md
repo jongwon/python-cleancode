@@ -140,3 +140,12 @@
 
 
 ## 5. TDD
+
+
+
+
+참고
+> 파이썬 테스트와 리펙토링 : https://www.youtube.com/watch?v=S5SY2pkmOy0 
+> 박재성, TDD 리펙토링 연습하기 : 
+> MockTest 문서 : https://python.flowdas.com/library/unittest.mock.html
+> 
