@@ -5,6 +5,7 @@ from ch8.mrstatus import MergeRequestException
 from ch8.framework.ut_frameworks_4 import (MergeRequest, MergeRequestStatus)
 from ch8.framework.ut_frameworks_3 import AcceptanceThreshold
 
+
 def test_simple_rejected():
     merge_request = MergeRequest()
     merge_request.downvote("maintainer")

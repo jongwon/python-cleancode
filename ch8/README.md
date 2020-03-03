@@ -86,28 +86,16 @@
 
 ```
 
+#### [unittest](./framework/unittest.md)
 
-#### unittest
-
-
-
-``` python
-예외가 발생하는지 뿐만 아니라 오류 메시지도 확인하자. 
-발생한 예외가 정확히 우리가 원했던 예외인지 확인해야 한다.
-우연히 예상했던 것과 다른 이유로 같은 오류가 발생할 수도 있다.
-```
-
-#### 테스트 파라미터화
+#### [pytest](./framework/pytest.md)
 
 
-
-#### pytest
-
-
-### 2.2 코드 Coverage
+### 2.2 [코드 Coverage](./coverage/README.md)
 
 
-### 2.3 Mock 객체
+### 2.3 [Mock 객체](./mock/README.md)
+
 
 #### 패치와 모의에 대한 주의 사항
 

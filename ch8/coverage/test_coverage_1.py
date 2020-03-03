@@ -86,7 +86,7 @@ def test_12_cannot_vote_on_closed_merge_request():
     merge_request.close()
     pytest.raises(MergeRequestException, merge_request.upvote, "dev1")
     with pytest.raises(
-        MergeRequestException, match="can't vote on a closed merge request"
+        MergeRequestException, match="CLOSED 상태인 표결에는 merge 할 수 없습니다."
     ):
         merge_request.downvote("dev1")
 
@@ -94,14 +94,14 @@ def test_12_cannot_vote_on_closed_merge_request():
 @pytest.mark.parametrize(
     "context,expected_status",
     (
-        ({"downvotes": set(), "upvotes": set()}, MergeRequestStatus.PENDING),
+        ({"반대": set(), "찬성": set()}, MergeRequestStatus.PENDING),
         (
-            {"downvotes": set(), "upvotes": {"dev1"}},
+            {"반대": set(), "찬성": {"dev1"}},
             MergeRequestStatus.PENDING,
         ),
-        ({"downvotes": "dev1", "upvotes": set()}, MergeRequestStatus.REJECTED),
+        ({"반대": "dev1", "찬성": set()}, MergeRequestStatus.REJECTED),
         (
-            {"downvotes": set(), "upvotes": {"dev1", "dev2"}},
+            {"반대": set(), "찬성": {"dev1", "dev2"}},
             MergeRequestStatus.APPROVED,
         ),
     ),
