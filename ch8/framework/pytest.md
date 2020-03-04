@@ -12,10 +12,8 @@ def test_simple_rejected():
     merge_request.downvote("maintainer")
     assert merge_request.status == MergeRequestStatus.REJECTED
 
-
 def test_just_created_is_pending():
     assert MergeRequest().status == MergeRequestStatus.PENDING
-
 
 def test_pending_awaiting_review():
     merge_request = MergeRequest()
@@ -28,7 +26,6 @@ def test_pending_awaiting_review():
   def test_invalid_types():
       merge_request = MergeRequest()
       pytest.raises(TypeError, merge_request.upvote, {"invalid-object"})
-
 
   def test_cannot_vote_on_closed_merge_request():
       merge_request = MergeRequest()
@@ -117,3 +114,16 @@ def test_rejected_to_approved(rejected_mr):
 * 픽스처는 테스트 스위트에서 자주 사용될 객체를 생성해서 재사용하는 것 이외에도 
 * <font color="red">직접 호출되지 않은 함수를 수정하거나 사용될 객체를 미리 설정하는 등의 사전 조건 설정에도 사용된다.</font>
 
+
+## 그 밖에
+
+* pytest 는 기본적으로 현재 디렉토리의 모든 test_*.py 클래스나 *_test.py 를 찾아서 실행한다.
+* 하위 경로를 주면 하위 경로의 테스트 클래스들을 찾아서 실행한다. 두개 이상을 줄 수도 있다.
+* 테스트 클래스에는 __init__ 메쏘드가 있으면 안된다.
+* 테스트 클래스의 메쏘드나 함수는 test_로 시작해야 한다.
+* @pytest.mark 는 클래스를 선별해서 테스트 할 수 있게 해준다.
+  
+
+
+## 참고 
+* [pytest 커스텀 마커 사용하기](http://doc.pytest.org/en/latest/example/markers.html)

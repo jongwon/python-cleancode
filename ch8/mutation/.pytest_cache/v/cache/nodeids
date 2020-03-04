@@ -1,0 +1,5 @@
+[
+  "test_mutation_testing_1.py::TestMergeRequestEvaluation::test_approved",
+  "test_mutation_testing_2.py::TestMergeRequestEvaluation::test_status_resolution",
+  "test_mutation_testing_2.py::TestMergeRequestEvaluation::test_string_values"
+]

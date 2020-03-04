@@ -1,8 +1,8 @@
-import unittest
+from unittest import TestCase, main
 from ch8.test1.myfuncs import add_one, abs
 
 
-class TestMyFuncs(unittest.TestCase):
+class TestMyFuncs(TestCase):
     """
     1+1=2
     """
@@ -10,7 +10,7 @@ class TestMyFuncs(unittest.TestCase):
         self.assertEqual(add_one(1), 2)
 
 
-class TestAbs(unittest.TestCase):
+class TestAbs(TestCase):
     """
     |1|=1
     |-3|=3
@@ -24,3 +24,7 @@ class TestAbs(unittest.TestCase):
 
     def test_0_의_절대값은_0(self):
         self.assertEqual(abs(0), 0)
+
+
+if __name__ == '__main__':
+    main()
