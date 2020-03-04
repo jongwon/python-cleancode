@@ -1,0 +1,18 @@
+[
+  "ut_frameworks_5.py::test_simple_rejected",
+  "ut_frameworks_5.py::test_rejected_with_approvals",
+  "ut_frameworks_5.py::test_rejected_to_pending",
+  "ut_frameworks_5.py::test_rejected_to_approved",
+  "ut_frameworks_5.py::test_just_created_is_pending",
+  "ut_frameworks_5.py::test_pending_awaiting_review",
+  "ut_frameworks_5.py::test_approved",
+  "ut_frameworks_5.py::test_no_double_approve",
+  "ut_frameworks_5.py::test_upvote_changes_to_downvote",
+  "ut_frameworks_5.py::test_downvote_to_upvote",
+  "ut_frameworks_5.py::test_invalid_types",
+  "ut_frameworks_5.py::test_cannot_vote_on_closed_merge_request",
+  "ut_frameworks_5.py::test_acceptance_threshold_status_resolution[context0-MergeRequestExtendedStatus.PENDING]",
+  "ut_frameworks_5.py::test_acceptance_threshold_status_resolution[context1-MergeRequestExtendedStatus.PENDING]",
+  "ut_frameworks_5.py::test_acceptance_threshold_status_resolution[context2-MergeRequestExtendedStatus.REJECTED]",
+  "ut_frameworks_5.py::test_acceptance_threshold_status_resolution[context3-MergeRequestExtendedStatus.APPROVED]"
+]

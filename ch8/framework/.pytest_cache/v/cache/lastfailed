@@ -1,0 +1,7 @@
+{
+  "test_ut_frameworks_4.py::test_acceptance_threshold_status_resolution[context0-MergeRequestExtendedStatus.PENDING]": true,
+  "test_ut_frameworks_4.py::test_acceptance_threshold_status_resolution[context1-MergeRequestExtendedStatus.PENDING]": true,
+  "test_ut_frameworks_4.py::test_acceptance_threshold_status_resolution[context2-MergeRequestExtendedStatus.REJECTED]": true,
+  "test_ut_frameworks_4.py::test_acceptance_threshold_status_resolution[context3-MergeRequestExtendedStatus.APPROVED]": true,
+  "test_ut_frameworks_4.py::test_cannot_vote_on_closed_merge_request": true
+}

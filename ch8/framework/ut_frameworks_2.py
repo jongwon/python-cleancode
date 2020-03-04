@@ -26,7 +26,7 @@ class MergeRequest(object):
 
         if self._context["반대"]:
             return MergeRequestStatus.REJECTED
-        elif len(self._context["찬성"]) > 2:
+        elif len(self._context["찬성"]) >= 2:
             return MergeRequestStatus.APPROVED
         return MergeRequestStatus.PENDING
 
